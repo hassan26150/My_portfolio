@@ -1,0 +1,56 @@
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loader-logo {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.loader-bracket {
+  color: var(--accent-blue);
+}
+
+.loader-text {
+  color: var(--text-primary);
+  margin: 0 4px;
+}
+
+.loader-bar-container {
+  width: 200px;
+  height: 3px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.loader-bar {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.loader-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

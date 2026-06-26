@@ -1,0 +1,140 @@
+.education {
+  position: relative;
+}
+
+.edu-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.edu-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 36px;
+  display: flex;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.edu-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient-soft);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.edu-content {
+  flex: 1;
+}
+
+.edu-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.edu-degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.edu-institution {
+  font-size: 1rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.edu-location {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.edu-period-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-purple);
+  background: var(--accent-purple-dim);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.coursework-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.coursework-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coursework-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.coursework-tag:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  box-shadow: var(--glow-blue);
+}
+
+@media (max-width: 768px) {
+  .edu-card {
+    flex-direction: column;
+    padding: 24px;
+    padding-left: 28px;
+  }
+
+  .edu-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .edu-top {
+    flex-direction: column;
+  }
+
+  .edu-period-badge {
+    align-self: flex-start;
+  }
+}

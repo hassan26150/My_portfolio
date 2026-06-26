@@ -1,0 +1,45 @@
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--accent-blue), 0 0 20px rgba(0, 212, 255, 0.3);
+  mix-blend-mode: screen;
+}
+
+.cursor-dot.clicking {
+  background: var(--accent-purple);
+  box-shadow: 0 0 15px var(--accent-purple), 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 212, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: calc(var(--z-cursor) - 1);
+  transform: translate(-50%, -50%);
+  transition: border-color 0.3s ease;
+}
+
+.cursor-follower.hovering {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.06);
+}
+
+.cursor-follower.clicking {
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-follower {
+    display: none !important;
+  }
+}

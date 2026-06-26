@@ -1,0 +1,89 @@
+.blog {
+  position: relative;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.blog-coming-soon {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-coming-soon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.coming-soon-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--accent-gradient-soft);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-blue);
+  margin: 0 auto 24px;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.coming-soon-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.coming-soon-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coming-soon-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.topic-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-blue);
+  background: var(--accent-blue-dim);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.topic-tag:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--glow-blue);
+}
+
+@media (max-width: 768px) {
+  .blog-coming-soon {
+    padding: 40px 24px;
+  }
+}
